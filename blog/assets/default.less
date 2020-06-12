@@ -1,0 +1,149 @@
+.conrainer{
+    box-sizing: border-box;
+    overflow: hidden;
+    color: gray;
+    font-size: 1rem;
+
+    display: grid;
+    grid-gap: .5vh;
+    grid-template-columns: repeat(13,1fr);
+    grid-template-rows: 8vh 83vh 8vh;
+    place-content:center;
+    grid-template-areas: 
+    "h h h h h h h h h h h h h"
+    ". c c c c c c c c c s s ."
+    "f f f f f f f f f f f f f";
+
+    .header{
+        border-bottom:1px solid rgb(226, 219, 219);
+        background-color: #fff;
+
+        grid-area: h;
+        display: grid;
+        grid-template-columns: repeat(13,1fr);
+        grid-template-areas:". hi hi hi . . . . . hm hm hm .";
+        .header-info{
+            grid-area: hi;
+            place-self: center start; 
+            
+            .header-info-logo{
+                color: #1e90ff;
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-right: .5rem;
+            }
+            
+        }
+        .header-menu{
+            grid-area: hm;
+            place-self: center end;
+
+            .header-menu-item{
+                margin-left: 1.5rem;
+            }
+
+            .header-menu-item-active{
+                color: #1e90ff;
+            }
+        }
+    }
+
+    .content{
+        grid-area: c;
+        padding: 5px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        border:1px solid rgb(226, 219, 219);
+        background-color: #fff;
+    }
+
+    .side{
+        grid-area: s;
+        border-radius: 10px;
+        padding: 5px;
+        border:1px solid rgb(226, 219, 219);
+        background-color: #fff;
+        box-sizing: border-box;
+        overflow: hidden;
+        
+        .side-tips{
+            border-bottom: 1px solid rgb(226, 219, 219);
+            text-align: center;
+            line-height: 2.5rem;
+            margin-bottom: .5rem;
+        }
+
+        .side-kind{
+            display: flex;
+            flex-direction: column;
+            .side-kind-item{
+                text-align: center;
+                margin: .2rem;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .footer{
+        grid-area: f;
+        border-top:1px solid rgb(226, 219, 219);
+        background-color: #fff;
+        font-size: .7rem;
+        display: grid;
+        grid-gap: .2rem;
+        place-content:center;
+        text-align: center;
+    }
+}
+
+.article{
+    padding: .5rem;
+    border:1px solid rgb(226, 219, 219);
+    border-radius: 8px;
+    margin: .5rem;
+    box-shadow: 2px 2px 3px rgb(226, 219, 219);
+    box-sizing: border-box;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px 30px;
+
+    grid-template-areas: 
+    "ah ah"
+    "ab ab"
+    "af af";
+
+    .article-header{
+        grid-area: ah;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "at aw";
+        justify-content:center;
+        align-content:center;
+        
+        border-bottom:1px solid rgb(226, 219, 219);
+
+        .article-title{
+            grid-area: at;
+            color: black;
+        }
+
+        .article-watch{
+            grid-area: aw;
+            justify-self:end;
+            margin-right: 2rem;
+        }
+    }
+
+    .article-body{
+        grid-area: ab;
+        align-self:center;
+        font-size: .8rem;
+    }
+
+    .article-footer{
+        grid-area: af;
+        align-self:center;
+    }
+}
