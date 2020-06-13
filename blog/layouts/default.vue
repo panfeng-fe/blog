@@ -13,9 +13,9 @@
             <keep-alive>
                 <nuxt-link to="/" active-class="header-menu-item-active" class="header-menu-item" exact>首页</nuxt-link>
             </keep-alive>
-            <keep-alive>
+            <!-- <keep-alive>
                 <nuxt-link to="/resume" active-class="header-menu-item-active" class="header-menu-item" exact>简历</nuxt-link>
-            </keep-alive>
+            </keep-alive> -->
             <keep-alive>
                 <nuxt-link to="/about" active-class="header-menu-item-active" class="header-menu-item" exact>关于</nuxt-link>
             </keep-alive> 
