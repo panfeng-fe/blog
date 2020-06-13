@@ -3,6 +3,8 @@
 # Logs
 /logs
 *.log
+.igitignore
+.ediotrconfig
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
